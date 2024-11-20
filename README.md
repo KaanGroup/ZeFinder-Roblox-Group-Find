@@ -6,10 +6,10 @@
 ### Running :
   3. Make Tor proxies using Xolo's Tor proxy generator in /ProxyGen/main.py
   4. Run /main.py
-## Region unlocking cookies(⚠️DANGEROUS PLS ONLY USE EMPTY BACON ACCOUNTS)
-  ⚠️WARNING DO NOT USE ACCOUNTS THAT CONTAIN ROBUX/VALUEBLES⚠️
-  U can region unlock cookies using https://eggy.cool/iplockbypass?cookie= UR COOKIE
-  DO NOT USE VALUEBLE ACCOUNTS, Eggy.cool is a registered cookie stealer, if u put an account that contain robux on there it i'll 100% get robbed
+### Region unlocking cookies(⚠️DANGEROUS PLS ONLY USE EMPTY BACON ACCOUNTS)
+⚠️WARNING DO NOT USE ACCOUNTS THAT CONTAIN ROBUX/VALUEBLES⚠️
+U can region unlock cookies using this link and adding ur cookie at the end https://eggy.cool/iplockbypass?cookie=
+DO NOT USE VALUEBLE ACCOUNTS, **Eggy.cool is a registered cookie stealer**, if u put an account that contain robux on there it i'll 100% get robbed
 ## Remember :
 Proprietary License
 
