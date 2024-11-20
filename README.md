@@ -1,8 +1,8 @@
-# Ze-Scraper
+#Ze-Scraper
 ## How to use:
 ### Setup :
   1. Add ur webhook in config.json
-  2. Create 3-4 new empty Roblox accounts and then add their cookies into cookies.txt(region unlocked cookies are better)
+  2. Create 3-4 **new empty** Roblox accounts and then add their cookies into cookies.txt(region unlocked cookies are better)
 ### Running :
   3. Make Tor proxies using Xolo's Tor proxy generator in /ProxyGen/main.py
   4. Run /main.py
