@@ -1,3 +1,5 @@
+# Credits : Xolo/@efenatuyo
+
 import requests
 
 class Bypass:
