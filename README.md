@@ -1,7 +1,7 @@
 # Ze-Scraper
 
 Ze-Scraper is a powerful Roblox group finder that makes around 500,000 checks per minute, utilizing free Tor proxies.
-![Image of the script running](https://imgur.com/JI0caCj)
+![Image of the script running](https://i.imgur.com/JI0caCj.png)
 
 ## How to Use
 
