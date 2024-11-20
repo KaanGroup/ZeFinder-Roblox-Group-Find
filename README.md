@@ -6,6 +6,7 @@
 ### Running :
   3. Make Tor proxies using Xolo's Tor proxy generator in /ProxyGen/main.py
   4. Run /main.py
+---
 ## Remember :
 Proprietary License
 
