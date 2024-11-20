@@ -7,13 +7,17 @@ All Rights Reserved.
 This software is licensed under the Proprietary License. Unauthorized copying, modification, distribution, or use
 of this software is strictly prohibited. For full license details, see the LICENSE file in this repository.
 """
-
+import time
 current_cookie=0
 cookies = None
 uses = 0
-with open("cookies.txt", "r") as f:
+with open("src/cookies.txt", "r") as f:
     cookies = [_.replace("\n", "") for _ in f.readlines()]
-cookie = cookies[0]
+if len(cookies) == 0:
+    print("No Cookies found, please follow the instructions in README.md")
+    time.sleep(3)
+else:
+    cookie = cookies[0]
 
 def Get_Cookie():
     global uses, cookie, current_cookie

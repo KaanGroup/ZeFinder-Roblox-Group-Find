@@ -1,6 +1,4 @@
 {
-    "webhook_url" : "",
-    "make_closed_list_mode" : 0,
-    "thread_amount" : 200,
+    "webhook_url" : "https://discord.com/api/webhooks/1308851408954720336/iqk5gCaIpeloJkViw7j_ilKFtrJYc8HsuoAag_GBKDok6SP-khbir908XGC4dFtD-dl3",
     "discord_userID" : 426999379325485057
 }
