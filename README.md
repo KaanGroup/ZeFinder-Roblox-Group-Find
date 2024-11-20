@@ -1,4 +1,4 @@
-# ZeScraper
+# Ze-Scraper
 ## How to use:
 1. Add ur webhook in config.json
 2. Add a couple region unlocked cookies into cookies.txt
