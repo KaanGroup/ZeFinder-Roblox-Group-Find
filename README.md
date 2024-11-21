@@ -34,7 +34,7 @@ Ze-Scraper is a powerful Roblox group finder that performs around 500,000 checks
 
 ### Support
 
-- If you encounter any issues, contact **``@Bueezi``** on Discord.
+- If you encounter any issues, contact **``@Bueezi.``** on Discord.
 
 ---
 
