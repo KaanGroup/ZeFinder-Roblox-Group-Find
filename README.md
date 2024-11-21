@@ -1,30 +1,40 @@
 # Ze-Scraper
 
-Ze-Scraper is a powerful Roblox group finder that makes around 500,000 checks per minute, utilizing free Tor proxies.
+Ze-Scraper is a powerful Roblox group finder that performs around 500,000 checks per minute, utilizing free Tor proxies & Account Cookies to bypass Roblox's APIs Ratelimits.  
+
 ![Image of the script running](https://i.imgur.com/JI0caCj.png)
 
 ## How to Use
 
 ### Setup
 
-1. **Configure Webhook:**
-   - Add your Discord webhook URL into the `config.json` file.
-
-2. **Prepare Roblox Accounts:**
+1. **Prepare Roblox Accounts:**
    - Create 3-4 new empty Roblox accounts.
-   - Add the cookies for these accounts into the `cookies.txt` file. *(Region-unlocked cookies are recommended for better performance.)*
+   - Add the cookies for these accounts into the `new_cookies.txt` file.
+
+2. **Configure Webhook & Discord User ID:**
+   - Add your Discord webhook URL and Discord User ID to the `config.json` file.
 
 ### Running
 
-1. **Set Up Tor Proxies:**
-   - Generate Tor proxies using Xolo's Tor Proxy Generator located in `/ProxyGen/main.py`.
+1. **Install Python:**
+   - Visit [Python.org](https://www.python.org/downloads/) and download the latest release.
 
-2. **Start the Scraper:**
-   - Run the script located in `/main.py` to begin the group finding process.
+2. **Install Libraries:**
+   - Run the following command to install the required libraries:
+     ```bash
+     python -m pip install aiohttp asyncio
+     ```
 
-### Suport
+3. **Start the Scraper:**
+   - Run the script with the following command:
+     ```bash
+     python main.py
+     ```
 
-- If u encounter any issues contact **``@Bueezi.``** on Discord
+### Support
+
+- If you encounter any issues, contact **``@Bueezi``** on Discord.
 
 ---
 
@@ -32,6 +42,6 @@ Ze-Scraper is a powerful Roblox group finder that makes around 500,000 checks pe
 
 **Proprietary License**
 
-Copyright 2024 Bueezi™ All Rights Reserved.
+Copyright 2024 Bueezi™. All Rights Reserved.
 
 This software is licensed under the Proprietary License. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited. For full license details, see the `LICENSE` file in this repository.
