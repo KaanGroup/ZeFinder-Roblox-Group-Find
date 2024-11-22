@@ -4,18 +4,7 @@ Ze-Finder is a powerful Roblox group finder that performs around 500,000 checks 
 
 ![Image of the script running](https://i.imgur.com/JI0caCj.png)
 
-## How to Use
-
-### Setup
-
-1. **Prepare Roblox Accounts:**
-   - Create 3-4 new empty Roblox accounts.
-   - Add the cookies for these accounts into the `new_cookies.txt` file.
-
-2. **Configure Webhook & Discord User ID:**
-   - Add your Discord webhook URL and Discord User ID to the `config.json` file.
-
-### Running
+## Setup
 
 1. **Install Python:**
    - Visit [Python.org](https://www.python.org/downloads/) and download the latest release.
@@ -25,11 +14,18 @@ Ze-Finder is a powerful Roblox group finder that performs around 500,000 checks 
      ```bash
      python -m pip install aiohttp asyncio psutil requests
      ```
+3. **Prepare Roblox Accounts:**
+   - Create 3-4 new empty Roblox accounts.
+   - Add the cookies for these accounts into the `new_cookies.txt` file.
 
-3. **Start the Scraper:**
+4. **Configure Webhook & Discord User ID:**
+   - Add your Discord webhook URL and Discord User ID to the `config.json` file.
+
+
+5. **Start the Scraper:**
    - Run the script with the following command:
      ```bash
-     python main.py
+     python -m main.py
      ```
 
 ### Support
