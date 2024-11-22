@@ -15,7 +15,7 @@ Ze-Finder is a powerful Roblox group finder that performs around 500,000 checks 
      python -m pip install aiohttp asyncio psutil requests
      ```
 3. **Download & Exctract the repository:**
-   - Download the repo as a zip file & then extract it
+   - [Download this repository](https://github.com/Bueezi/ZeFinder-Roblox-Group-Finder/archive/refs/heads/main.zip) as a zip file & then extract it
 4. **Prepare Roblox Accounts:**
    - Create 3-4 new empty Roblox accounts.
    - Add the cookies for these accounts into the `new_cookies.txt` file.
