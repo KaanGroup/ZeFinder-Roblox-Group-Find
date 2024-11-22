@@ -9,16 +9,16 @@ of this software is strictly prohibited. For full license details, see the LICEN
 """
 
 import asyncio, json
+from src.unlock_cookie import Unlock_Cookies
+with open("new_cookies.txt", "r") as f:
+    if "_" in f.read(): Unlock_Cookies()
 from src.fetch import Fetch, Status
 from src.webhook import Send_Webhook
 from src.get_cookie import Get_Cookie
 from src.tor import Make_Proxies
 from src.get_ids import Get_IDs
-from src.unlock_cookie import Unlock_Cookies
 
 proxy_start_port = 50_000 # if tor won't launch changing this may help, try 9080 or 15000
-with open("new_cookies.txt", "r") as f:
-    if "_" in f.read(): Unlock_Cookies()
 config = None
 with open("config.json", "r") as f:
     config = json.load(f)

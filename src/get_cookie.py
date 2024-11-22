@@ -15,7 +15,7 @@ with open("src/cookies.txt", "r") as f:
     cookies = [_.replace("\n", "") for _ in f.readlines()]
 if len(cookies) == 0:
     print("No Cookies found, please follow the instructions in README.md")
-    time.sleep(3)
+    exit()
 else:
     cookie = cookies[0]
 
