@@ -1,6 +1,6 @@
-# Ze-Scraper
+# Ze-Finder
 
-Ze-Scraper is a powerful Roblox group finder that performs around 500,000 checks per minute, utilizing free Tor proxies & Account Cookies to bypass Roblox's APIs Ratelimits.  
+Ze-Finder is a powerful Roblox group finder that performs around 500,000 checks per minute, utilizing free Tor proxies & Account Cookies to bypass Roblox's APIs Ratelimits.  
 
 ![Image of the script running](https://i.imgur.com/JI0caCj.png)
 
