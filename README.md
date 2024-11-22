@@ -23,7 +23,7 @@ Ze-Finder is a powerful Roblox group finder that performs around 500,000 checks 
 2. **Install Libraries:**
    - Run the following command to install the required libraries:
      ```bash
-     python -m pip install aiohttp asyncio
+     python -m pip install aiohttp asyncio psutil requests
      ```
 
 3. **Start the Scraper:**
