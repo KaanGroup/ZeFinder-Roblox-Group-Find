@@ -6,7 +6,7 @@ Ze-Finder is a powerful Roblox group finder that performs around 500,000 checks 
 
 ## Setup
 
-[![Setup Tutorial Video :](https://img.youtube.com/vi/tavy6EUamYk/0.jpg)](https://youtu.be/tavy6EUamYk)
+You can find the Youtube tutorial video [here](https://youtu.be/tavy6EUamYk).
 
 1. **Install Python:**
    - Visit [Python.org](https://www.python.org/downloads/) and download the latest release.
