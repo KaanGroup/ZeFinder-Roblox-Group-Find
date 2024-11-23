@@ -58,7 +58,7 @@ async def Thread(n):
                         AddClosed(group["id"])
 
 async def main():
-    thread_amount=100 # Changing this may cause Tor to crash, if Tor is crashing I recommend decreasing this variable
+    thread_amount=100 # Changing this may cause Tor to crash, a good rule of thumb would be 100 threads per 500k CPM so if u do around 750k CPM this should be no more than 150
     Make_Proxies(thread_amount, proxy_start_port)
     tasks = [asyncio.create_task(Thread(_)) for _ in range(thread_amount)]
     tasks.append(asyncio.create_task(Status()))

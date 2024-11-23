@@ -5,7 +5,7 @@
 # https://archive.torproject.org/tor-package-archive/torbrowser/13.0.16/tor-expert-bundle-windows-x86_64-13.0.16.tar.gz
 # File's SHA256 : 66fd723d0dd219807c6d7dcc331e25c8d05adccf4a66312928fbe1d0e45670ed
 
-import os, subprocess, psutil, requests
+import os, subprocess, psutil, requests, time
 
 class ServiceInstaller:
     def __init__(self, amount, proxy_start_port):
@@ -43,7 +43,8 @@ class ServiceInstaller:
         process = subprocess.Popen(f"{exe_path} -nt-service -f {config_path}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         while 1:
             line = process.stdout.readline().decode().strip()
-            # time.sleep(0.05) # Comment this out and add "import time" for debugging
+            time.sleep(0.001)
+            # time.sleep(0.05) # Comment this out for debugging
             print(line)
             if "Bootstrapped 100% (done): Done" in line:
                 break

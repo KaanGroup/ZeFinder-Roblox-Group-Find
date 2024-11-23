@@ -8,7 +8,7 @@ This software is licensed under the Proprietary License. Unauthorized copying, m
 of this software is strictly prohibited. For full license details, see the LICENSE file in this repository.
 """
 
-import asyncio, aiohttp, time
+import asyncio, aiohttp, time, random
 
 time_list = []
 current_time = None
@@ -17,16 +17,13 @@ last_status = ""
 async def Fetch(url, cookie=None, proxy=None):
     async with aiohttp.ClientSession() as session:
         try:
-            async with session.get(url, cookies={'.ROBLOSECURITY': cookie}, proxy=proxy, timeout=15) as response:
+            timeout = aiohttp.ClientTimeout(5)  # Configure timeouts
+            async with session.get(url, cookies={'.ROBLOSECURITY': cookie}, proxy=proxy, timeout=timeout) as response:
                 return await response.json(), await IsError(response.status, url)
-        except asyncio.TimeoutError:
-            print("Request timed out.")
-            return 0, 1
-        except (aiohttp.ClientHttpProxyError, aiohttp.ClientConnectionError):
-            print("Proxy Error")
-            return 0, 1
-        except aiohttp.ContentTypeError:
-            print("Content Type Error")
+        except Exception as e: 
+            error = type(e).__name__
+            print(error)
+            await asyncio.sleep(random.randint(180,230)) # After a timeout Tor takes 180s before making the proxy available again.
             return 0, 1
             
 
@@ -38,8 +35,8 @@ async def IsError(status, API):
         return 0
     elif status == 429:
         print(f"{last_status}, R on V{str(API)}")
-        if API ==2: 
-            await asyncio.sleep(1)
+        if API ==2:
+            await asyncio.sleep(random.randint(2,6))
     else:
         print(f"{last_status}, U : {status} on V{str(API)}")
     return 1

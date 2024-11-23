@@ -23,7 +23,7 @@ def Get_Cookie():
     global uses, cookie, current_cookie
     uses+=1
     if uses>2000:
-        print(f"COOKIE SWAPPING WE NOW ON COOKIE : {current_cookie}")
+        print(f"COOKIE SWAPPING WE NOW ON COOKIE : {current_cookie+1}")
         current_cookie = current_cookie + 1 if current_cookie < len(cookies)-1 else 0
         cookie = cookies[current_cookie]
         uses = 0
