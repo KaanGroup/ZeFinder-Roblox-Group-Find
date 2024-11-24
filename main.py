@@ -50,10 +50,10 @@ async def Thread(n):
                     if error: continue
                     if "isLocked" not in data and data["publicEntryAllowed"] == True:
                         print(f"True Ownerless found : {str(group['id'])}")
-                        message = f"<@{config["discord_userID"]}> https://www.roblox.com/groups/{str(group['id'])}"
+                        message = f"<@{config['discord_userID']}> https://www.roblox.com/groups/{str(group['id'])}"
                         await Send_Webhook(config["webhook_url"] ,message)
                         with open("src/logs.txt", "a") as f:
-                            f.write(f"Found Ownerless group : {str(group["id"])}\n")
+                            f.write(f"Found Ownerless group : {str(group['id'])}\n")
                     elif not make_closed_list_mode:
                         AddClosed(group["id"])
 

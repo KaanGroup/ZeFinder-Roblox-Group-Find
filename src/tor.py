@@ -11,9 +11,9 @@ class ServiceInstaller:
     def __init__(self, amount, proxy_start_port):
         self.amount = amount
         self.proxy_start_port = proxy_start_port
-        self.stop_tor_windows()
+        self.Stop_Tor_Windows()
 
-    def generate_config(self, config_path):
+    def Generate_Config(self, config_path):
         tor_config = f"SOCKSPort {self.proxy_start_port}\n"
         # tor_config += "ExitNodes {fr},{de},{nl}\nExcludeExitNodes {us},{cn},{ru}\n" download geoip files if u wanna use this
         tor_config += "BandwidthRate 1GB\nBandwidthBurst 1GB\n"
@@ -31,16 +31,19 @@ class ServiceInstaller:
         with open(exe_path, 'wb') as f:
             f.write(response.content)
 
-    def install_service(self):
+    def Start_Tor(self):
         exe_path = "src\\tor\\tor.exe"
         config_path = "src\\tor\\config"
-        self.generate_config(config_path)
+        self.Generate_Config(config_path)
 
-        if not os.path.isfile(exe_path):
-            print("Getting Tor...")
-            self.download_tor()
-
-        process = subprocess.Popen(f"{exe_path} -nt-service -f {config_path}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if platform.system() == "Linux":
+            print("Running on Linux")
+            process = subprocess.Popen(["/usr/bin/tor", "-f", config_path, "--RunAsDaemon"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        else:
+            if not os.path.isfile(exe_path):
+                print("Getting Tor...")
+                self.download_tor()
+            process = subprocess.Popen(f"{exe_path} -nt-service -f {config_path}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         while 1:
             line = process.stdout.readline().decode().strip()
             time.sleep(0.001)
@@ -49,7 +52,7 @@ class ServiceInstaller:
             if "Bootstrapped 100% (done): Done" in line:
                 break
             
-    def stop_tor_windows(self):
+    def Stop_Tor_Windows(self):
         for proc in psutil.process_iter():
             try:
                 if proc.name() == "tor.exe":
@@ -59,6 +62,6 @@ class ServiceInstaller:
                 pass
 
 def Make_Proxies(amount, proxy_start_port):
-    ServiceInstaller(amount, proxy_start_port).install_service()
+    ServiceInstaller(amount, proxy_start_port).Start_Tor()
     print("Tor Succesfully inited")
     return
