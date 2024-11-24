@@ -5,7 +5,7 @@
 # https://archive.torproject.org/tor-package-archive/torbrowser/13.0.16/tor-expert-bundle-windows-x86_64-13.0.16.tar.gz
 # File's SHA256 : 66fd723d0dd219807c6d7dcc331e25c8d05adccf4a66312928fbe1d0e45670ed
 
-import os, subprocess, psutil, requests, time
+import os, subprocess, psutil, requests, time, platform
 
 class ServiceInstaller:
     def __init__(self, amount, proxy_start_port):
@@ -38,7 +38,7 @@ class ServiceInstaller:
 
         if platform.system() == "Linux":
             print("Running on Linux")
-            process = subprocess.Popen(["/usr/bin/tor", "-f", config_path, "--RunAsDaemon"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            process = subprocess.Popen(["/usr/bin/tor", "-f", config_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         else:
             if not os.path.isfile(exe_path):
                 print("Getting Tor...")
