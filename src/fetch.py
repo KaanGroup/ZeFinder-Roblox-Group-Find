@@ -30,8 +30,9 @@ async def Fetch(url, cookie=None, proxy=None):
 async def IsError(status, API):
     API = 2 if "v2" in API else 1
     if status == 200:
-        print(f"{last_status}")
-        time_list.append(current_time)
+        if API == 2:
+            print(f"{last_status}")
+            time_list.append(current_time)
         return 0
     elif status == 429:
         print(f"{last_status}, R on V{str(API)}")

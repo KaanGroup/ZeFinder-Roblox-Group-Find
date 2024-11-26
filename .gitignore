@@ -3,3 +3,7 @@ src/tor/tor.exe
 src/logs.txt
 src/cookies.txt
 config.json
+src/cookies.txt
+proxies.txt
+src/cookies.txt
+config.json
